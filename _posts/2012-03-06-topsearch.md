@@ -2,7 +2,7 @@
 title: Search
 subtitle: New physics in top quark pair invariant mass spectrum.
 category: analysis
-img: ../images/analysis/search.jpg
+img: ../images/search.jpg
 more: http://cds.cern.ch/record/1429634?ln=en
 ---
 

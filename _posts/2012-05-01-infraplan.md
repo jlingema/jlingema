@@ -2,7 +2,7 @@
 title: infra-plan.de
 subtitle: Wordpress-based site for architecture firm
 category: webdev
-img: ../images/web/infraplan.jpg
+img: ../images/infraplan.jpg
 more: http://www.infra-plan.de/
 ---
 

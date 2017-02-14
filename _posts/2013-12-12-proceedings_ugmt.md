@@ -2,7 +2,7 @@
 title: TWEPP Proceedings
 subtitle: Global Muon Trigger upgrade plans.
 category: trigger
-img: ../images/trigger/twepp2013.jpg
+img: ../images/twepp2013.jpg
 more: http://iopscience.iop.org/article/10.1088/1748-0221/8/12/C12017/meta;jsessionid=624987335B935848765FB28B07C8AAEF.c5.iopscience.cld.iop.org
 ---
 
