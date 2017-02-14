@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {% include header.html %}
+  {% include topbar.html %}
+  <body>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h2>{{page.title}}</h2>
+        <h3 class="subhead">{{page.excerpt}}</h3>
+      </div>
+    </div>
+
+  <div class="container post-content content">
+  {{ content }}
+  </div>
+  {% include footer.html %}
+  </body>
+
+  {% include scripts.html %}
+
+</html>

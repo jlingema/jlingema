@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {% include header.html %}
+  {% include topbar.html %}
+  <body>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h2>{{page.title}}</h2>
+        <h3 class="subhead">{{page.excerpt}}</h3>
+      </div>
+    </div>
+    <div class="container">
+
+    {% for tag in page.display %}
+      <h3>{{tag.desc}}</h3>
+
+      {% for post in site.categories[tag.name] %}
+      {% assign mod = forloop.index0 | modulo:4 %}
+      {% if mod == 0 %}
+        {% if forloop.first == false %}</div>{% endif %}
+        <div class="row">
+      {% endif %}
+      <div class="col-xs-6 col-lg-3 col-md-3">
+        <h4>{{post.title}}</h4>
+        <p>{{post.excerpt}}</p>
+        {% if post.external %}
+          <p><a class="btn btn-default" href="{{ post.external }}" role="button">View details &raquo;</a></p>
+        {% else %}
+          <p><a class="btn btn-default" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" role="button">View details &raquo;</a></p>
+        {% endif %}
+      </div>
+      {% if forloop.last %}</div>{% endif %}
+      {% endfor %}
+
+    {% endfor %}
+
+    </div>
+
+  {% include footer.html %}
+  </body>
+
+  {% include scripts.html %}
+
+</html>

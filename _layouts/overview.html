@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {% include header.html %}
+  {% include topbar.html %}
+
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- Carousel
+            ================================================== -->
+            <div id="myCarousel" class="carousel slide rounded" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                {% for project in site.data.categories.projects %}
+                  <li data-target="#myCarousel" data-slide-to="{{forloop.index0}}" {% if forloop.first %}class="active"{% endif %}></li>
+                {% endfor %}
+              </ol>
+                <div class="carousel-inner" role="listbox">
+                {% for project in site.data.categories.projects %}
+                    <div class="item{% if forloop.first %} active{% endif %}">
+                      <img src="{{project.img}}" alt="{{project.short}}" class="img-rounded bordered">
+                      <div class="container">
+                        <div class="carousel-caption">
+                          <h3>{{project.short}}</h3>
+                          <p class="carousel-description">{{project.excerpt}}</p>
+                        </div>
+                      </div>
+                    </div>
+                {% endfor %}
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+            {{ site.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header" style="margin-top:-10px">
+        <h3>Work Projects</h3>
+      </div>
+    </div>
+    <div class="container content">
+      <div class="row">
+        {% for project in site.data.categories.projects %}
+          <div class="col-md-4">
+            <div class="list-group">
+              <a href="categories/{{project.id}}.html" class="list-group-item overview">
+              <h4 class="list-group-item-heading">{{project.name}}</h4>
+              <p class="list-group-item-text">
+                {{project.desc}}
+              </p>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h3>Private Projects</h3>
+      </div>
+    </div>
+    <div class="container content">
+      <div class="row">
+        {% for project in site.data.categories.hobbies %}
+          <div class="col-md-4">
+            <div class="list-group">
+              <a href="categories/{{project.id}}.html" class="list-group-item overview">
+              <h4 class="list-group-item-heading">{{project.name}}</h4>
+              <p class="list-group-item-text">
+                {{project.desc}}
+              </p>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% include footer.html %}
+
+  </body>
+
+  {% include scripts.html %}
+
+  <script>
+    $(document).ready(function() {
+        $('.myCarousel').carousel()
+    });
+  </script>
+</html>

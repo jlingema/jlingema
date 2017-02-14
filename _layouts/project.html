@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {% include header.html %}
+  {% include topbar.html %}
+  <body>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h2>{{page.title}}</h2>
+        <h3 class="subhead">{{page.excerpt}}</h3>
+      </div>
+    </div>
+    <div class="container">
+    {% for post in site.categories[page.category] %}
+
+      <div class="row featurette">
+      {% assign mod = forloop.index | modulo:2 %}
+      {% if mod == 0 %}
+        <div class="col-md-5">
+            <a class="thumbnail" href="{{post.more}}">
+            <img class="featurette-image img-responsive" src="{{post.img}}" alt="tumbnail">
+          </a>
+        </div>
+        <div class="col-md-7 project-description" style="margin-bottom:50px;">
+            <a class="headline" href="{{post.more}}"><h2 class="featurette-heading">{{post.title}}</a>
+            <small>{{post.subtitle}}</small></h2>
+              {{ post.content }}
+              <p>{% if post.related %}<a class="btn btn-primary" href="{{ site.baseurl | prepend: site.url }}/{{post.related}}" role="button">Related Post &raquo;</a> {%endif%}
+                 <a class="btn btn-primary" href="{{post.more}}" role="button">Read More &raquo;</a></p>
+        </div>
+      {% else %}
+        <div class="col-md-7 project-description" style="margin-bottom:50px;">
+            <a class="headline" href="{{post.more}}"><h2 class="featurette-heading">{{post.title}}</a>
+            <small>{{post.subtitle}}</small></h2>
+            {{post.content}}
+            <p>{% if post.related %}<a class="btn btn-primary" href="{{ site.baseurl | prepend: site.url }}/{{post.related}}" role="button">Related Post &raquo;</a> {%endif%}
+               <a class="btn btn-primary" href="{{post.more}}" role="button">Read More &raquo;</a></p>
+        </div>
+        <div class="col-md-5">
+            <a class="thumbnail" href="{{post.more}}">
+            <img class="featurette-image img-responsive" src="{{post.img}}" alt="tumbnail">
+          </a>
+        </div>
+      {% endif %}
+      </div>
+      {% if forloop.last == false %}
+        <hr class="featurette-divider" style="margin-bottom:75px">
+      {% endif %}
+
+    {% endfor %}
+    </div>
+
+  {% include footer.html %}
+  </body>
+
+  {% include scripts.html %}
+
+</html>

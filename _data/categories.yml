@@ -1,0 +1,38 @@
+---
+projects:
+  - name: "Software for the FCC"
+    short: "FCC: Software"
+    id: "fcc"
+    desc: >
+      <p>Software development for the Future Cirular Collider design study.</p>
+      <p>The FCC brings current approaches and computing infrastructure to the limits. <strong>High performance</strong>
+      becomes critical. At the same time we avoid re-inventing the wheel.</p>
+    excerpt: Software for a new collider design study.
+    img: /images/5.jpg
+  - name: "Trigger Electronics at CMS"
+    short: "CMS: Trigger Electronics"
+    id: "trigger"
+    desc: >
+      <p>Work on the configuration software and simulation of a hardware based trigger.</p> <p><strong>
+      What is triggering?</strong> The huge amount of information gathered in each collision at the Large Hadron
+      Collider cannot all be saved. The hardware trigger decides what to keep.</p>
+    excerpt: Controlling and simulating trigger electronics.
+    img: /images/3.jpg
+  - name: "Data Analysis at CMS"
+    short: "CMS: Data Analysis"
+    id: "analysis"
+    desc: >
+      <p>Analysis of data with <strong>top quark pairs</strong> in the final state. The analyses were performed during
+      my diploma thesis and the following year with CMS data.</p><p>Measurement of the top quark mass and a search for
+      resonances.</p>
+    excerpt: Statistical analysis of big data.
+    img:  /images/2.jpg
+hobbies:
+  - name: "Web development"
+    id: "webdev"
+    desc: >
+      <p>Web sites mostly developed on my own time.</p>
+  - name: "Bits and Pieces"
+    id: "code"
+    desc: >
+      <p>Random topics related to programming.</p>
