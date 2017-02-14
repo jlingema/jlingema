@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   <h3 class='subhead'>with a scientific background</h3>
   <p class='headline'>Experimental particle physicist with a background in computing, software development and data analysis with an eye for layout and presentation. Experienced in writing clear, well documented code in Python and C++. Passionate about problem solving. Works well in international teams. Proven ability to work and deliver under pressure.</p>
 url: "" # the subpath of your site, e.g. /blog
-baseurl: "https://jlingema.github.io/" # the base hostname & protocol for your site
+baseurl: "https://jlingema.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
