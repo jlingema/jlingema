@@ -21,7 +21,7 @@
                 <li class="divider"></li>
                 <li class="dropdown-header">Hobbies</li>
                 {% for project in site.data.categories.hobbies %}
-                  <li><a href="{{ site.baseurl | prepend: site.url }}{{ project.id | prepend: "categories/" }}.html">{{ project.name }}</a></li>
+                  <li><a href="{{ site.baseurl | prepend: site.url }}{{ project.id | prepend: "/categories/" }}.html">{{ project.name }}</a></li>
                 {% endfor %}
               </ul>
             </li>
