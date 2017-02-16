@@ -25,7 +25,7 @@
         <h4>{{post.title}}</h4>
         <p>{{post.excerpt}}</p>
         {% if post.external %}
-          <p><a class="btn btn-default" href="{{ post.external }}" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="{{ post.external }}" target="_blank" role="button">View details &raquo;</a></p>
         {% else %}
           <p><a class="btn btn-default" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" role="button">View details &raquo;</a></p>
         {% endif %}

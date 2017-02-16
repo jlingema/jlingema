@@ -26,7 +26,7 @@
             <small>{{post.subtitle}}</small></h2>
               {{ post.content }}
               <p>{% if post.related %}<a class="btn btn-primary" href="{{ site.baseurl | prepend: site.url }}/{{post.related}}" role="button">Related Post &raquo;</a> {%endif%}
-                 <a class="btn btn-primary" href="{{post.more}}" role="button">Read More &raquo;</a></p>
+                 <a class="btn btn-primary" href="{{post.more}}" target="_blank" role="button">Read More &raquo;</a></p>
         </div>
       {% else %}
         <div class="col-md-7 project-description" style="margin-bottom:50px;">
@@ -34,7 +34,7 @@
             <small>{{post.subtitle}}</small></h2>
             {{post.content}}
             <p>{% if post.related %}<a class="btn btn-primary" href="{{ site.baseurl | prepend: site.url }}/{{post.related}}" role="button">Related Post &raquo;</a> {%endif%}
-               <a class="btn btn-primary" href="{{post.more}}" role="button">Read More &raquo;</a></p>
+               <a class="btn btn-primary" href="{{post.more}}" target="_blank" role="button">Read More &raquo;</a></p>
         </div>
         <div class="col-md-5">
             <a class="thumbnail" href="{{post.more}}">
